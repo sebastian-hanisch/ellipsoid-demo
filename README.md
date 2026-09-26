@@ -5,7 +5,7 @@
 
 Siebtes Stück der **Lineare-Programmierung-Reihe** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Kind der Wurzel [tableau-simplex-demo](https://github.com/sebastian-hanisch/tableau-simplex-demo) und Kontrast zu [klee-minty-demo](https://github.com/sebastian-hanisch/klee-minty-demo). Bisher rechnete jedes Stück Simplex-Varianten: von Ecke zu Ecke, im schlimmsten Fall exponentiell viele Pivots. **Khachiyan (1979)** zeigte, dass sich LPs auch **polynomial** lösen lassen – mit einem ganz anderen Verfahren: ein **Ellipsoid**, das die Lösung sicher enthält, wird in jeder Iteration durch eine Nebenbedingung angeschnitten und durch das kleinste Ellipsoid ersetzt, das die Restmenge umschließt. Das Volumen schrumpft je Schnitt mindestens um den Faktor exp(−1/(2(n+1))). Die Theorie sagt "polynomial", die Praxis sagt "unbrauchbar" – die Demo **misst**, was davon stimmt. Vier Fragen: **(1) Die Ellipsen** – was passiert in einer Iteration? **(2) Iterationen** – wie viele braucht es und wovon hängt es ab? **(3) Gegen den Simplex** – was kostet es in Operationen, und gibt es einen Fall, in dem das Ellipsoid gewinnt? **(4) Grenzen** – Schnittarten, Skalierung, Gleichungen, Genauigkeit.
 
-**Einordnung in die Reihe:** geplant sind zwölf Stücke, dies ist das siebte (Details in `lp-planung/PLAN.md` des Portfolio-Ordners):
+**Einordnung in die Reihe:** die Reihe hat elf Stücke, dies ist das siebte (Details in `lp-planung/PLAN.md` des Portfolio-Ordners):
 
 ```
 Tableau-Simplex (Wurzel)                                                                  [gebaut: tableau-simplex-demo]
