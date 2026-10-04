@@ -10,10 +10,10 @@ Siebtes Stück der **Lineare-Programmierung-Reihe** der "Konzepte"-Reihe für di
 ```
 Tableau-Simplex (Wurzel)                                                                  [gebaut: tableau-simplex-demo]
  ├─ Pivotregeln & Entartung ─ Simplex im schlimmsten und im typischen Fall (Klee-Minty)   [gebaut: pivotregeln-demo, klee-minty-demo]
- ├─ Revised Simplex ─ Präsolve, Skalierung & Numerik                                     [gebaut: revised-simplex-demo]  →  [nicht gebaut]
+ ├─ Revised Simplex ─ Präsolve, Skalierung & Numerik                                     [gebaut: revised-simplex-demo, praesolve-demo]
  ├─ Dualität & Sensitivität ─ Dualer Simplex & Neuoptimierung                            [gebaut: lp-dualitaet-demo, dualer-simplex-demo]
  ├─ Ellipsoid-Methode (Kontrast: polynomial in der Theorie)                              [DIESES STÜCK]
- └─ Innere Punkte ─ PDLP (Verfahren erster Ordnung) ─ Crossover & Simplex gegen Innere Punkte gegen PDLP  [nicht gebaut]
+ └─ Innere Punkte ─ PDLP (Verfahren erster Ordnung) ─ Crossover & Simplex gegen Innere Punkte gegen PDLP  [gebaut: innere-punkte-demo, pdlp-demo, crossover-demo]
 ```
 
 Ergebnis in Kürze: **Die Iterationen wachsen sauber wie n² · ln(1/ε), aber die Operationen liegen auf Zufallsinstanzen um den Faktor 160 bis 2100 hinter dem Simplex – nur auf dem Klee-Minty-Würfel dreht sich das, ab n = 13 bis 14.** Auf Zufallsinstanzen braucht das Ellipsoid bei ε = 10^-6 **24 bis 25.5 · n² Iterationen** (102 bei n = 2, 916 bei n = 6, 2380 bei n = 10, 9748 bei n = 20), der Simplex 1 bis 14 Pivots. Jede weitere Stelle Genauigkeit kostet gleich viele Iterationen (bei n = 8: 291, das sind 88 % der Theorie-Steigung 2n(n+1) ln 10 = 332). **Tiefe Schnitte** sparen 12 bis 22 % der Iterationen. Die **Theorie-Schranke** für den ersten zulässigen Mittelpunkt liegt weit über dem Gemessenen (bei n = 8 gemessen 10 Iterationen gegen 360). Auf dem **Klee-Minty-Würfel** (n = 14) braucht der Simplex mit Dantzig-Regel 16383 Pivots, das Ellipsoid 4052 Iterationen: **8.2 Mio. gegen 14.3 Mio. Operationen (Verhältnis 0.57)** – aber nur gegen die schlechte Pivotregel; Steepest Edge löst den Würfel in einem Pivot. **Numerik:** das Zertifikat gelingt bis ε = 10^-12 in allen getesteten Instanzen (n = 4 bis 40) und scheitert ab 10^-13 in allen, unabhängig von n; bei schlecht skalierten Spalten (10^12) bricht es durch Rundung ab, und der Simplex liefert dann in 3 von 5 Fällen stillschweigend einen falschen Wert.
@@ -95,4 +95,4 @@ Tests: `pip install -r requirements-dev.txt` und `python -m pytest tests/ -W err
 - Bland, R. G., Goldfarb, D., & Todd, M. J. (1981). *The ellipsoid method: a survey.* Operations Research 29(6), 1039–1091.
 - Grötschel, M., Lovász, L., & Schrijver, A. (1988). *Geometric Algorithms and Combinatorial Optimization.* Springer.
 
-Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning.
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Lineare Programmierung: vom Tableau zum Crossover](https://sebastianhanisch.net/konzepte-lineare-programmierung.html).

@@ -66,7 +66,7 @@ um den Faktor exp(−1/(2(n+1))). Die Theorie sagt "polynomial", die Praxis sagt
 **(3) Gegen den Simplex** - was kostet es in Operationen? **(4) Grenzen** - Schnittarten, Skalierung, Gleichungen.
 """
 )
-st.caption("Kind der Wurzel [Tableau-Simplex](https://github.com/sebastian-hanisch/tableau-simplex-demo); Kontrast zu [Klee-Minty](https://github.com/sebastian-hanisch/klee-minty-demo). Folgestücke (Innere Punkte, PDLP, Präsolve) sind [noch nicht gebaut].")
+st.caption("Kind der Wurzel [Tableau-Simplex](https://github.com/sebastian-hanisch/tableau-simplex-demo); Kontrast zu [Klee-Minty](https://github.com/sebastian-hanisch/klee-minty-demo). Folgestücke: [Innere Punkte](https://github.com/sebastian-hanisch/innere-punkte-demo), [PDLP](https://github.com/sebastian-hanisch/pdlp-demo), [Präsolve](https://github.com/sebastian-hanisch/praesolve-demo).")
 
 with st.expander("So funktioniert die Ellipsoid-Methode", expanded=True):
     st.markdown(
@@ -332,6 +332,6 @@ Implementiert in `ell_ellipsoid.py` (Schnitte, Zertifikate), `ell_algorithm.py` 
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Lineare Programmierung: vom Tableau zum Crossover](https://sebastianhanisch.net/konzepte-lineare-programmierung.html)."
 )
